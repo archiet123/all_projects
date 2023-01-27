@@ -1,0 +1,27 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    background-color: #293241;
+    color: aliceblue;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.title{
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 5rem;
+    padding-bottom: 5rem;    
+}
+.main{
+    padding-left: 5rem;    
+}
+
+.loginbtn{
+    background-color: #98c1d9;
+    color: aliceblue;
+    text-decoration: none;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    font-weight: bold;
+}
