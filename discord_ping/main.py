@@ -19,13 +19,13 @@ print("Current Time =", current_time)
 #     counter = 0
 # else:
     
-if counter == 0:
-    counter = 1
-    message = "its 420! 😩"
-    post_message = {
-        'content': "<@523197640347746325>\n" + message
-    }
-    x = requests.post(webhook_url, json = post_message)
+# if counter == 0:
+#     counter = 1
+message = "its 420! 😩"
+post_message = {
+    'content': "<@523197640347746325>\n" + message
+}
+requests.post(webhook_url, json = post_message)
 
-else:
-    print("already sent")
+# else:
+#     print("already sent")
