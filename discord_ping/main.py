@@ -1,9 +1,11 @@
 from datetime import datetime
+from dotenv import load_dotenv
 import requests
+import os
 
-url_webhook = "https://discord.com/api/webhooks/1069570843807596595/W5t99ZaTbWbDitxpQgcdqDD9GkLc1qdtAk52tKSkFlcAhagsPcMbG7cE33uzO5fPSuy8" #my server
+load_dotenv()
 
-#url_webhook = "https://discord.com/api/webhooks/1069573236821590057/KpcBeoNtPTYmkYw8g_Rzc3vgruwYDp9whtO6vfuvMGzlMiFOK9VLijyK9qTmZqxSKqrU"#T level server
+webhook_url = os.environ.get("WEBHOOK")
 
 now = datetime.now()
 current_time = now.strftime("%H:%M")
