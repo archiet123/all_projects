@@ -11,7 +11,7 @@
                 <div class="leftNav">
                     <a class="navButton" id="active" href="index.php">Home</a>
                     <a class="navButton" href="healthAdvice.php">Health Advice</a>
-                    <a class="navButton" href="airConditions.php">Air Conditions</a>
+                    <a class="navButton" href="airConditions.php">Polution levels</a>
                     <a class="navButton" href="more.php">More</a>
                     <a class="navButton" href="things.php">Things</a>
                 </div>                
@@ -24,12 +24,15 @@
     </section>
     <section class="main">
         <div class="backGround">
-            <img src="/assests/weatherBackground.png" width="100%" alt="Raining">
+            <img src="/assests/betterBackground.png" width="100%" alt="Raining">
             <div class="searchbarContainer">
                 <p1 class="heading">Enter your area!</p1>
                 <input class="input" type="text" placeholder="Find your area">
             </div>
         </div>
+    </section>
+    <section class="mapPage">
+
     </section>
 </body>
 </html>
