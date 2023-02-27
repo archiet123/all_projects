@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://kit.fontawesome.com/56ec8ed5e8.css" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/56ec8ed5e8.js" crossorigin="anonymous"></script>
     <script src="/app.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/56ec8ed5e8.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -30,7 +31,7 @@
 
     <div class="slim-nav">
         <div>
-            <i id="nav-icon" class="fa-regular fa-bars"></i>
+            <i class="fa-sharp fa-regular fa-bars"></i>
         </div>
     </div>
     <section id="slim-nav" class="navigation hidden slim blackBackground">
