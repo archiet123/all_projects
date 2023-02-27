@@ -31,8 +31,7 @@ gray = cv2.cvtColor(column1, cv2.COLOR_BGR2GRAY)
 minMaxLoc = cv2.minMaxLoc(gray)
 yRegion = str(minMaxLoc)[27:30]#the second value in squre brackets '30' will sometimes return a bracket, find a method to strip this character.
 
-
-#print(f'the size of the image is: {shape}')
-#print(f'the brightest part of the image, darkest part of the image, x coord, y coord{minMaxLoc}')
-#print(f'y region: {yRegion}')
+print(f'the size of the image is: {shape}')
+print(f'the brightest part of the image, darkest part of the image, x coord, y coord{minMaxLoc}')
+print(f'y region: {yRegion}')
 
