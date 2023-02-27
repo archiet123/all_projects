@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <section class="navigation">
+    <section class="navigation wide">
         <div class="navContainer">
             <nav class="navBar">
                 <div class="leftNav">
@@ -27,6 +27,27 @@
         </div>
     </section>
 
+    <div class="slim-nav">
+        button
+    </div>
+    <!-- <section class="navigation slim blackBackground">
+        <nav class="navBar">
+            <div id="nav-icon" class="icon">
+                <!-- <i class="fa-regular fa-bars"></i> 
+    <p>d</p>
+    </div>
+    </nav>
+    <div class="slim-menu">
+        <a class="navButton" id="active" href="index.php">Home</a>
+        <a class="navButton" href="healthAdvice.php">Health Advice</a>
+        <a class="navButton" href="polutionLevels.php">Polution levels</a>
+        <a class="navButton" href="more.php">More</a>
+        <a class="navButton" href="things.php">Things</a>
+        <a class="navButton" href="register.php">Register</a>
+        <a class="navButton" href="login.php">Login</a>
+    </div>
+    </section> -->
+
     <section class="main">
         <div class="headerWrapper">
             <div class="backGround">
@@ -39,7 +60,7 @@
                         <a class="icon fa-sharp fa-solid fa-magnifying-glass" href="getWeatherData.php"></a>
                     </div>
                 </div>
-                <img class="backgroundImage" src="/assests/image_part_001.png" width="100%" alt="sun shinning through clouds">
+                <!-- <img class="backgroundImage" src="/assests/image_part_001.png" width="100%" alt="sun shinning through clouds"> -->
             </div>
 
         </div>
