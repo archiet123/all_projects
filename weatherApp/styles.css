@@ -34,12 +34,18 @@ body {
 }
 
 .backGround {
-  position: relative;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: white;
   width: 100%;
 
   background-image: url("/assests/image_part_001.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 20rem;
 }
 
 /* containers */
@@ -131,7 +137,7 @@ body {
   align-items: center;
 }
 
-.slim {
+.slim-nav {
   display: none;
 }
 
@@ -148,7 +154,7 @@ body {
     display: none;
   }
 
-  .slim {
+  .slim-nav {
     display: block;
   }
 }
@@ -168,4 +174,17 @@ body {
   background-color: #282c34;
   padding-inline: 2rem;
   padding-block: 1rem;
+  z-index: 100;
+}
+
+#slim-nav {
+  z-index: 100;
+}
+
+.visable {
+  display: block;
+}
+
+.hidden {
+  display: none;
 }

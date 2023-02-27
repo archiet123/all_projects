@@ -6,6 +6,7 @@
     <title>Weather App</title>
     <link rel="stylesheet" href="https://kit.fontawesome.com/56ec8ed5e8.css" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/56ec8ed5e8.js" crossorigin="anonymous"></script>
+    <script src="/app.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -28,25 +29,21 @@
     </section>
 
     <div class="slim-nav">
-        button
+        <div>
+            <i id="nav-icon" class="fa-regular fa-bars"></i>
+        </div>
     </div>
-    <!-- <section class="navigation slim blackBackground">
-        <nav class="navBar">
-            <div id="nav-icon" class="icon">
-                <!-- <i class="fa-regular fa-bars"></i> 
-    <p>d</p>
-    </div>
-    </nav>
-    <div class="slim-menu">
-        <a class="navButton" id="active" href="index.php">Home</a>
-        <a class="navButton" href="healthAdvice.php">Health Advice</a>
-        <a class="navButton" href="polutionLevels.php">Polution levels</a>
-        <a class="navButton" href="more.php">More</a>
-        <a class="navButton" href="things.php">Things</a>
-        <a class="navButton" href="register.php">Register</a>
-        <a class="navButton" href="login.php">Login</a>
-    </div>
-    </section> -->
+    <section id="slim-nav" class="navigation hidden slim blackBackground">
+        <div class="slim-menu">
+            <a class="navButton" id="active" href="index.php">Home</a>
+            <a class="navButton" href="healthAdvice.php">Health Advice</a>
+            <a class="navButton" href="polutionLevels.php">Polution levels</a>
+            <a class="navButton" href="more.php">More</a>
+            <a class="navButton" href="things.php">Things</a>
+            <a class="navButton" href="register.php">Register</a>
+            <a class="navButton" href="login.php">Login</a>
+        </div>
+    </section>
 
     <section class="main">
         <div class="headerWrapper">
