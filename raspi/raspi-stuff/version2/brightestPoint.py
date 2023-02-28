@@ -25,7 +25,7 @@ column2 = img[260:650, 496:506]#column1 bounds
 
 
 toRemove = ["/", ")", "("]
-All = [""]
+All = []
 
 for index in range(0,3):
     imageName = (f'column{index}') # save images as newimage{column index}    
