@@ -2,9 +2,9 @@ import numpy
 import cv2
 
 #--------------the loop-----------------#
-def mse(img1, img2):
+def mse(charImage, ogImage):
    h, w = img1.shape
-   diff = cv2.subtract(img1, img2)
+   diff = cv2.subtract(charImage, ogImage)
    err = np.sum(diff**2)
    mse = err/(float(h*w))
    return mse, diff
@@ -22,7 +22,7 @@ for columnsIdx in range (0,3):#(0,85):
         ogImage = cv2.imread(f'{ogColumnName}.jpg', 0)
 
         charImage = cv2.imread(f'column{charIndex}.jpg', 0)        
-        percent, diff = mse(img1, img2)
+        percent, diff = mse(charImage, ogImage)
         print("Image matching Error between the two images:",error)
         
 

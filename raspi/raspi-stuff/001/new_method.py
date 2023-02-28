@@ -2,12 +2,10 @@ import numpy as np
 import cv2
 
 # load the input images
-img1 = cv2.imread('image1.jpg')
-img2 = cv2.imread('image1.jpg')
-
+img1 = cv2.imread("all_projects\raspi\raspi-stuff\001\image1.jpg")
+img2 = cv2.imread('all_projects\raspi\raspi-stuff\001\image2.jpg')
+print (img1)
 # convert the images to grayscale
-img1 = cv2.cvtColor(img1, cv2.COLOR_BGR2GRAY)
-img2 = cv2.cvtColor(img2, cv2.COLOR_BGR2GRAY)
 
 # define the function to compute MSE between two images
 def mse(img1, img2):
