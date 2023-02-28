@@ -10,6 +10,9 @@ from imutils import contours
 #camera = PiCamera()
 #camera.rotation = -180
 
+characters = ['0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+final_string = ""
+
 def getCharacter(final):
 	if final > 48 and final < 60:
 		selector = 1
@@ -56,7 +59,11 @@ for index in range(0,3):
 	print(f'y region: {final}')
 	
 	final = int(final)
-	getCharacter(final)
+	selector = getCharacter(final)
+	final_string+=characters[selector]
+
+print("\n")
+print(f'The final string is: {final_string}')
 
 	#cv2.waitKey(0)#is used to keep 
 
