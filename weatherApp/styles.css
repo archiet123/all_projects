@@ -201,6 +201,7 @@ body {
   transform: translate(-50%);
   left: 50%;
   width: 20%;
+  top: 15%;
 }
 
 .logoWrapper{
@@ -212,10 +213,6 @@ body {
   font-size: 25px;
 }
 
-.loginForm{
-
-}
-
 .inputBox{
   font-size: 20px;
   border: none;
@@ -225,15 +222,42 @@ body {
   background-color: transparent;
   border: 0px solid;
   outline: none;
-  
+  margin-top: 2rem;
 }
 
 .divider{
   background-color: black;
   margin: auto;
-  text-align: center;
-  
+  text-align: center;  
   height: 1px;
-  width: 100%;
-  margin-bottom: 2rem;
+  width: 100%;  
+}
+
+.forgotPasswordwrapper{
+  margin-top: 1rem;
+  font-size: 15px;
+  font-weight: bold;  
+}
+
+.forgotPassword{
+  color: black;
+  text-decoration: none;
+}
+
+.submitButton{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Submit{
+  align-items: center;
+  background-color: #87ce0c;
+  border: none;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
 }

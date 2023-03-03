@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link href="styles.css" rel="stylesheet">
     <title>Weather App</title>
@@ -7,8 +8,9 @@
     <script src="https://kit.fontawesome.com/56ec8ed5e8.js" crossorigin="anonymous"></script>
     <script src="/app.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-<section class="navigation wide">
+    <section class="navigation wide">
         <div class="navContainer">
             <nav class="navBar">
                 <div class="leftNav">
@@ -52,16 +54,25 @@
             <h1 class="heading">Log in</h1>
         </div>
 
-        <form method="POST" class="loginForm" action="login.php">
-        <div class="inputWrapper">
-            <input class="username inputBox" type="text" placeholder="Email or username">
-        </div>
-        <div class="divider"></div>
-        <div class="inputWrapper">
-            <input class="password inputBox" type="password" placeholder="Password ">
-        </div>
-        <div class="divider"></div>
-        
+        <form method="POST" class="loginForm" action="weatherApp\phpFiles\login_query.php">
+            <div class="inputWrapper">
+                <input class="username inputBox" type="text" name="username" placeholder="Email or username">
+            </div>
+            <div class="divider"></div>
+            <div class="inputWrapper">
+                <input class="password inputBox" type="password" name="password" placeholder="Password ">
+            </div>
+            <div class="divider"></div>
+            <div class="forgotPasswordwrapper">
+                <a class="forgotPassword" href="newPassword.php">Forgot password?</a>
+            </div>
+
+
+            <div class="submitButton">
+                <a class="Submit" href="weatherApp\phpFiles\login_query.php">Login</a>
+            </div>
+
     </section>
 </body>
+
 </html>

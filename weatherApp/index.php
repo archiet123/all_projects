@@ -41,7 +41,7 @@
             <a class="navButton" href="more.php">More</a>
             <a class="navButton" href="things.php">Things</a>
             <a class="navButton" href="register.php">Register</a>
-            <a class="navButton" href="login.php">Login</a>
+            <a class="navButton" href="/desgin/login.php">Login</a>
         </div>
     </section>
 
