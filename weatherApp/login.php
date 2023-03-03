@@ -69,7 +69,7 @@
 
 
             <div class="submitButton">
-                <a class="Submit" href="weatherApp\phpFiles\login_query.php">Login</a>
+                <button class="Submit" type="submit">Login</button>
             </div>
 
     </section>
