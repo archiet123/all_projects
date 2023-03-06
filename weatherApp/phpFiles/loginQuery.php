@@ -3,6 +3,4 @@
 $username = $_POST['username'];
 $password = $_POST['password'];
 
-echo "hello $username"
-
-?>
+echo "hello $username";
