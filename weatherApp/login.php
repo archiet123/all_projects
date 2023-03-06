@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<?php
+session_start();
+?>
+
 <head>
     <link href="styles.css" rel="stylesheet">
     <title>Weather App</title>
@@ -72,7 +76,34 @@
                 <button class="Submit" type="submit">Login</button>
             </div>
         </form>
+        <?php
+        //checking if the session 'error' is set. Erro session is the message if the 'Username' and 'Password' is not valid.
+        if (isset($_SESSION['empty'])) {
+        ?>
+            <!-- Display Login Error message -->
+            <div class="dangerAlert"><?php echo $_SESSION['empty'] ?></div>
+        <?php
+            //Unsetting the 'error' session after displaying the message. 
+            unset($_SESSION['empty']);
+        }
+        ?>
+
+        <?php
+
+        if (isset($_SESSION['error'])) {
+        ?>
+
+            <div class="dangerAlert"><?php echo $_SESSION['error'] ?></div>
+        <?php
+
+            unset($_SESSION['error']);
+        }
+        ?>
     </section>
+
+
+
+
 </body>
 
 </html>
