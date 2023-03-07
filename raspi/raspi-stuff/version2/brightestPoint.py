@@ -59,7 +59,7 @@ for index in range(0,3):
 	print(f'y region: {final}')
 	
 	final = int(final)
-	selector = getCharacter(final)
+	selector = getCharacter(final)  
 	final_string+=characters[selector]
 
 print("\n")
