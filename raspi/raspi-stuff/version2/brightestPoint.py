@@ -73,6 +73,9 @@ plt.imsave("testing8.jpg", column8)
 column9 = img[260:650, 584: 594]
 plt.imsave("testing9.jpg", column9)
 
+column10 = img[260:650, 596:606]
+plt.imsave("testing10.jpg", column10)
+
 toRemove = ["/", ")", "("]
 
 
@@ -95,7 +98,7 @@ for index in range(0,9):
 	
 	#print(f'the size of the image is: {shape}')	
 	print(f'the brightest part of the image, darkest part of the image, x coord, y coord{minMaxLoc}')	
-	print(f'y region: {final}')
+	print(f'{imageName} {final}')
 	
 	final = int(final)
 	selector = getCharacter(final)  
