@@ -41,7 +41,7 @@
             <a class="navButton" href="more.php">More</a>
             <a class="navButton" href="things.php">Things</a>
             <a class="navButton" href="register.php">Register</a>
-            <a class="navButton" href="login.php">Login</a>
+            <a class="navButton" href="/desgin/login.php">Login</a>
         </div>
     </section>
 
@@ -67,7 +67,7 @@
             <p1 class="heading blackBackground mapHeader">Uk Weather Map</p1>
         </div>
         <div class="mapContainer">
-            <img class="map" src="/assests/ukOutline.png" alt="uk map">
+            <img class="map" src="/assests/ukOutline.png" alt="uk map" ">
         </div>
     </div>
 
