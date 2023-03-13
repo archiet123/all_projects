@@ -54,7 +54,7 @@ session_start();
     <section class="registrationContainer">
 
         <div class="logoWrapper">
-            <img class="logo" src="/assests/companyIcon.jpg" alt="company icon" width="100px">
+            <img class="logo" src="/assets/companyIcon.jpg" alt="company icon" width="100px">
         </div>
         <div class="headingWrapper">
             <h1 class="heading">Register an account!</h1>
@@ -132,9 +132,44 @@ session_start();
             unset($_SESSION['success']);
         }
         ?>
+
+        <?php
+
+        if (isset($_SESSION['userTaken'])) {
+        ?>
+
+            <div class="dangerAlert"><?php echo $_SESSION['userTaken'] ?></div>
+        <?php
+
+            unset($_SESSION['userTaken']);
+        }
+        ?>
+        <?php
+
+        if (isset($_SESSION['numberTaken'])) {
+        ?>
+
+            <div class="dangerAlert"><?php echo $_SESSION['numberTaken'] ?></div>
+        <?php
+
+            unset($_SESSION['numberTaken']);
+        }
+        ?>
+
+        <?php
+
+        if (isset($_SESSION['invalid'])) {
+        ?>
+
+            <div class="dangerAlert"><?php echo $_SESSION['invalid'] ?></div>
+        <?php
+
+            unset($_SESSION['invalid']);
+        }
+        ?>
     </section>
 
-
+    <h1 class="phoneNumber">11111111111</h1>
 </body>
 
 </html>

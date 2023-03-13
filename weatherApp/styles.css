@@ -41,7 +41,7 @@ body {
   color: white;
   width: 100%;
 
-  background-image: url("/assests/image_part_001.png");
+  background-image: url("/assets/heroImage.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -262,6 +262,10 @@ body {
   border-radius: 1rem;
 }
 
+.Submit:hover{
+  cursor: pointer;
+}
+
 /* registration page */
 
 .registrationContainer{
@@ -287,4 +291,58 @@ body {
     font-weight: bold;
     text-align: center;
     color: green;
+}
+
+.signedIn{
+    font-weight: bold;
+    text-align: center;
+    color: green;
+}
+
+.userMessage{
+    font-weight: bold;
+    text-align: center;
+    color: black;
+}
+
+
+
+.box{
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  
+  top: 90%;
+  border-radius: 1rem;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.question{
+  color: black;
+  font-size: small;
+}
+
+.registerButton{
+  background-color: #87ce0c;
+  color: black;
+  border-radius: 1rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+.phoneNumber{
+  color: black;
+}
+
+.testingEcho{
+  color: black;
+}
+
+.space{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 20px;
 }
