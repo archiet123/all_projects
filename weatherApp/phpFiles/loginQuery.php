@@ -4,6 +4,8 @@ session_start();
 //including the database connection
 require_once 'connection.php';
 
+
+$_SESSION['hello'] = "hello there";
 // Setting variables
 
 $username = $_POST['username'];
@@ -28,6 +30,10 @@ $row = $stmt->fetch();
 
 if (password_verify($password, ($row[4]))) {
     $_SESSION["user"] = $username;
+
+    $user = $_SESSION['user'];
+    $userMessage = "Welcome back $user, you have been signed in";
+    $_SESSION["userMessage"] = $userMessage;
     $_SESSION["user_id"] = ($row[0]);
     header('location: ../index.php');
 
