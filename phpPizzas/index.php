@@ -28,24 +28,38 @@
         <div class="heroContainer">
             <img src="assets/heroImage.png" alt="" width="100%">
         </div>
-        <div class="orderOption">
-            <div class="delivery">
-                <a class="delivery" href="">delivery</a>
+        <div class="pizzaOrderer">
+            <div class="orderOption">
+                <div id="active" class="delivery">
+                    <a href="">delivery</a>
+                </div>
+                <div class="collection">
+                    <a href="">collection</a>
+                </div>
+                <div class="eatIn">
+                    <a href="">eatIn</a>
+                </div>
             </div>
-            <div class="collection">
-                <a class="collection" href="">collection</a>
-            </div>
-            <div class="eatIn">
-                <a class="eatIn" href="">eatIn</a>
+            <div class="orderContainer">
+                <div class="delivery-container">
+                    <h1 class="heading">Enter your postcode</h1>
+                    <h3 class="description">Tell us where you are so we can deliver your pizza</h3>
+                </div>
+                <div class="hidden collection-container">
+                    <h1 class="heading">come collect u</h1>
+                    <h3 class="description">Tell us where you are so we can deliver your pizza</h3>
+                </div>
+                <div class="hidden eatIn-container">
+                    <h1 class="heading">we are her ecome to usu</h1>
+                    <h3 class="description">Tell us where you are so we can deliver your pizza</h3>
+                </div>
             </div>
         </div>
-        <div class="OrderContainer">
-            <div class="findPizza">
-                <h1 class="heading">Enter you postcode</h1>
-                <h3 class="description">Tell us where you are so we can deliver your pizza</h3>
-            </div>
-        </div>
+
     </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+    <script src="/app.js"></script>
 </body>
 
 </html>

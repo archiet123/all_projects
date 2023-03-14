@@ -4,11 +4,13 @@ session_start();
 //including the database connection
 require_once 'connection.php';
 
+
 $_SESSION['hello'] = "hello there";
 // Setting variables
 
 $username = $_POST['username'];
 $password = $_POST['password'];
+
 
 if ($username == "" or $password == "") {
     $_SESSION['empty'] = "One or more of the fields are empty.";
@@ -28,6 +30,7 @@ $row = $stmt->fetch();
 
 if (password_verify($password, ($row[4]))) {
     $_SESSION["user"] = $username;
+
     $user = $_SESSION['user'];
     $userMessage = "Welcome back $user, you have been signed in";
     $_SESSION["userMessage"] = $userMessage;
