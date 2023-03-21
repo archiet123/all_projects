@@ -9,20 +9,30 @@ import cv2
 import os
 
 from variables import * #importing variables from other file
+from variables import *
 os.system('python variables.py')
+os.system('python upperRow.py')
 
-
+print("\n")
 #camera = PiCamera()
 #camera.rotation = -180
 
-characters = ['0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+characters = ['0','1','2','3','4','5','6','7','8','9']
+aList = ['&', 'a', 'b','c','d','e','f','g','h','i']
+bList = ['-','j','k','l','m','n','o','p','q','r']
+cList = ['0','/','s','t','u','v','w','x','y','z']
 final_string = ""
 
+def selectList(result):
+	if result > 30 and result < 50:
+		listChoice = aList
+		return listChoice
+
 def getCharacter(final):
-	if final > 20 and final < 50:
+	if final > 20 and final < 45:
 		selector = 0
 		return selector
-	elif final > 55 and final < 90:
+	elif final > 46 and final < 90:
 		selector = 1
 		return selector
 	elif final > 95 and final < 120:
@@ -50,14 +60,34 @@ def getCharacter(final):
 		selector = 9
 		return selector
 
-img = cv2.imread(f'assets/card.jpg')#reading init pic
+
+
+
+
+
+img = cv2.imread(f'assets/abcCard.jpg')#reading init pic
 cropped = img[260:650,460:1460]#setting bounds of whole punchcard
 
+toRemove = ["/", ")", "("] 
 
-toRemove = ["/", ")", "("]
+for index in range(0,12):
+	topRowImg = (f'upperRowImages/topRow{index}')
+	prepare = cv2.imread(f'{topRowImg}.jpg')
+
+	first_gray = cv2.cvtColor(prepare, cv2.COLOR_BGR2GRAY)
+	
+	first_blurred = cv2.GaussianBlur(first_gray, (11, 11), 0)	
+	first_thresh = cv2.threshold(first_blurred, 200, 255, cv2.THRESH_BINARY)[1]	
+	first_erode = cv2.erode(first_thresh, None, iterations=2)
+	
+	
+	first_minMaxLoc = cv2.minMaxLoc(first_erode)
+	
+	first_yRegion = str(first_minMaxLoc)[25:28]	
+	result = first_yRegion.replace(')', '')
+	print(f'result: {result}')
 
 
-for index in range(0,10):
 	imageName = (f'assets/testing{index}') # save images as newimage{column index}    	
 	read = cv2.imread(f'{imageName}.jpg')#this will need to loop through all images that need to be read
 
@@ -70,7 +100,7 @@ for index in range(0,10):
 	blurred = cv2.GaussianBlur(gray, (11, 11), 0)	
 	thresh = cv2.threshold(blurred, 200, 255, cv2.THRESH_BINARY)[1]	
 	erode = cv2.erode(thresh, None, iterations=2) # perform a series of erosions and dilations to remove any small blobs of noise from the thresholded image
-	cv2.imwrite('eroded.jpg', erode)#saves the eroded image to the directory
+	#cv2.imwrite('eroded.jpg', erode)#saves the eroded image to the directory
 	#cv2.imshow('window', erode)
 	
 	minMaxLoc = cv2.minMaxLoc(erode)#minMaxloc finds the darkest and brightest part of the image (varibale) 'erode' 	
@@ -80,14 +110,17 @@ for index in range(0,10):
 	
 	#print(f'the size of the image is: {shape}')	
 	print(f'the brightest part of the image, darkest part of the image, x coord, y coord{minMaxLoc}')	
-	print(f'{imageName} {final}')
+	print(f'{imageName}: {final}')
 
 	if final == '':
+		index += -1
 		break
 	else:	
 		final = int(final)
 		selector = getCharacter(final)
 		final_string+=characters[selector]
+		print(f"final string: {final_string}")
+		print("\n")
 
 print("\n")
 print(f"the punchcard had {index} columns punched")
