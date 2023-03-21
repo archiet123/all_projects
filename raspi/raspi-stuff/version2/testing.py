@@ -26,10 +26,13 @@ final_string = ""
 blankCounter = 0
 
 def selectList(result):
-	if result > 30 and result < 50:
+	if result == 0:
+		listChoice = characters
+		return listChoice
+	elif result > 30 and result < 50:
 		listChoice = aList
 		return listChoice
-	elif result > 60 and result < 80:
+	elif result > 60 and result < 86:
 		listChoice = bList
 		return listChoice
 	elif result > 90 and result < 120:
@@ -40,7 +43,7 @@ def getCharacter(final):
 	if final > 5 and final < 30:
 		selector = 1
 		return selector
-	elif final > 46 and final < 75:
+	elif final > 45 and final < 75:
 		selector = 2
 		return selector
 	elif final > 80 and final < 100:
@@ -70,11 +73,11 @@ def getCharacter(final):
 	#	return selector
 
 
-img = cv2.imread(f'assets/realTest.jpg')#reading init pic
+img = cv2.imread(f'assets/abc123.jpg')#reading init pic
 cropped = img[260:650,460:1460]#setting bounds of whole punchcard
 
 
-for index in range(0,13):
+for index in range(0,8):
 	topRowImg = (f'upperRowImages/topRow{index}')
 	prepare = cv2.imread(f'{topRowImg}.jpg')
 
@@ -91,12 +94,15 @@ for index in range(0,13):
 	result = first_yRegion.replace(')', '')
 	#print(f'result: {result}')
 
-	result = int(result)
-	listSelector = selectList(result)
-
 	if result == '':
-		index += -1
-		break
+		result = 0
+		result = int(result)
+		listSelector = selectList(result)
+	else:
+		result = int(result)
+		listSelector = selectList(result)
+
+	
 
 
 
@@ -129,14 +135,13 @@ for index in range(0,13):
 
 	if final == '':
 		final = 0
-		index += -1
+		#index += -1
 		break
 	else:	
 		final = int(final)
 		selector = getCharacter(final)
 		final_string+=listSelector[selector]
-		print(f"final string: {final_string}")
-		print(f"the punchcard had {index} columns punched")
+		print(f"final string: {final_string}")		
 		print("\n")
 
 print("\n")

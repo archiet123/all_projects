@@ -7,7 +7,7 @@ import PIL
 import matplotlib.pyplot as plt
 import cv2
 
-img = cv2.imread(f'assets/realTest.jpg')#reading init pic
+img = cv2.imread(f'assets/abc123.jpg')#reading init pic
 
 
 
@@ -46,13 +46,20 @@ plt.imsave("assets/testing9.jpg", column9)
 column10 = img[310:650, 596:606]
 plt.imsave("assets/testing10.jpg", column10)
 
-'''
-listSelector0 = img[195:310, 470:480]
-plt.imsave("assets/first.jpg", listSelector0)
+column11 = img[310:650, 609:619]
+plt.imsave("assets/testing11.jpg", column11)
 
-listSelector1 = img[195:310, 470:480]
-plt.imsave("assets/second.jpg", listSelector1)
+column12 = img[310:650, 622:632]
+plt.imsave("assets/testing12.jpg", column12)
 
-listSelector2 = img[195:310, 470:480]
-plt.imsave("assets/third.jpg", listSelector2)
-'''
+column13 = img[310:650, 635:645]
+plt.imsave("assets/testing13.jpg", column13)
+
+column14 = img[310:650, 648:658]
+plt.imsave("assets/testing14.jpg", column14)
+
+column15 = img[310:650, 661:671]
+plt.imsave("assets/testing15.jpg", column15)
+
+column16 = img[310:650, 674:684]
+plt.imsave("assets/testing16.jpg", column16)

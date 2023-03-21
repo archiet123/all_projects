@@ -7,7 +7,7 @@ import PIL
 import matplotlib.pyplot as plt
 import cv2
 
-img = cv2.imread(f'assets/realTest.jpg')#reading init pic
+img = cv2.imread(f'assets/abc123.jpg')#reading init pic
 
 
 
@@ -43,3 +43,21 @@ plt.imsave("upperRowImages/topRow9.jpg", column9)
 
 column10 = img[180:300, 596:606]
 plt.imsave("upperRowImages/topRow10.jpg", column10)
+
+column11 = img[310:650, 609:619]
+plt.imsave("upperRowImages/topRow11.jpg", column11)
+
+column12 = img[310:650, 622:632]
+plt.imsave("upperRowImages/topRow12.jpg", column12)
+
+column13 = img[310:650, 635:645]
+plt.imsave("upperRowImages/topRow13.jpg", column13)
+
+column14 = img[310:650, 648:658]
+plt.imsave("upperRowImages/topRow14.jpg", column14)
+
+column15 = img[310:650, 661:671]
+plt.imsave("upperRowImages/topRow15.jpg", column15)
+
+column16 = img[310:650, 674:684]
+plt.imsave("upperRowImages/topRow16.jpg", column16)
