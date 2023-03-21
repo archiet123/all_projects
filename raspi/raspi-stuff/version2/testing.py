@@ -40,28 +40,28 @@ def getCharacter(final):
 	if final > 5 and final < 30:
 		selector = 1
 		return selector
-	elif final > 46 and final < 90:
+	elif final > 46 and final < 75:
 		selector = 2
 		return selector
-	elif final > 95 and final < 120:
+	elif final > 80 and final < 100:
 		selector = 3
 		return selector
-	elif final > 125 and final < 140:
+	elif final > 115 and final < 140:
 		selector = 4
 		return selector
-	elif final > 160 and final < 180:
+	elif final > 150 and final < 180:
 		selector = 5
 		return selector
-	elif final > 190 and final < 210:
+	elif final > 185 and final < 210:
 		selector = 6
 		return selector
-	elif final > 230 and final < 250:
+	elif final > 220 and final < 245:
 		selector = 7
 		return selector
-	elif final > 265 and final < 280:
+	elif final > 250 and final < 280:
 		selector = 8
 		return selector
-	elif final > 295 and final < 320:
+	elif final > 290 and final < 320:
 		selector = 9
 		return selector
 
@@ -70,11 +70,11 @@ def getCharacter(final):
 	#	return selector
 
 
-img = cv2.imread(f'assets/abcCard.jpg')#reading init pic
+img = cv2.imread(f'assets/realTest.jpg')#reading init pic
 cropped = img[260:650,460:1460]#setting bounds of whole punchcard
 
 
-for index in range(0,12):
+for index in range(0,13):
 	topRowImg = (f'upperRowImages/topRow{index}')
 	prepare = cv2.imread(f'{topRowImg}.jpg')
 
@@ -136,6 +136,7 @@ for index in range(0,12):
 		selector = getCharacter(final)
 		final_string+=listSelector[selector]
 		print(f"final string: {final_string}")
+		print(f"the punchcard had {index} columns punched")
 		print("\n")
 
 print("\n")

@@ -7,7 +7,7 @@ import PIL
 import matplotlib.pyplot as plt
 import cv2
 
-img = cv2.imread(f'assets/abcCard.jpg')#reading init pic
+img = cv2.imread(f'assets/realTest.jpg')#reading init pic
 
 
 
