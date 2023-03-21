@@ -21,54 +21,58 @@ characters = ['0','1','2','3','4','5','6','7','8','9']
 aList = ['&', 'a', 'b','c','d','e','f','g','h','i']
 bList = ['-','j','k','l','m','n','o','p','q','r']
 cList = ['0','/','s','t','u','v','w','x','y','z']
+listChoice = []
 final_string = ""
+blankCounter = 0
 
 def selectList(result):
 	if result > 30 and result < 50:
 		listChoice = aList
 		return listChoice
+	elif result > 60 and result < 80:
+		listChoice = bList
+		return listChoice
+	elif result > 90 and result < 120:
+		listChoice = cList
+		return listChoice
 
 def getCharacter(final):
-	if final > 20 and final < 45:
-		selector = 0
-		return selector
-	elif final > 46 and final < 90:
+	if final > 5 and final < 30:
 		selector = 1
 		return selector
-	elif final > 95 and final < 120:
+	elif final > 46 and final < 90:
 		selector = 2
 		return selector
-	elif final > 125 and final < 140:
+	elif final > 95 and final < 120:
 		selector = 3
 		return selector
-	elif final > 160 and final < 180:
+	elif final > 125 and final < 140:
 		selector = 4
 		return selector
-	elif final > 190 and final < 210:
+	elif final > 160 and final < 180:
 		selector = 5
 		return selector
-	elif final > 230 and final < 250:
+	elif final > 190 and final < 210:
 		selector = 6
 		return selector
-	elif final > 265 and final < 280:
+	elif final > 230 and final < 250:
 		selector = 7
 		return selector
-	elif final > 295 and final < 320:
+	elif final > 265 and final < 280:
 		selector = 8
 		return selector
-	elif final > 330 and final < 350:
+	elif final > 295 and final < 320:
 		selector = 9
 		return selector
 
-
-
-
+	#elif final > 330 and final < 350:
+	#	selector = 9
+	#	return selector
 
 
 img = cv2.imread(f'assets/abcCard.jpg')#reading init pic
 cropped = img[260:650,460:1460]#setting bounds of whole punchcard
 
-toRemove = ["/", ")", "("] 
 
 for index in range(0,12):
 	topRowImg = (f'upperRowImages/topRow{index}')
@@ -85,7 +89,18 @@ for index in range(0,12):
 	
 	first_yRegion = str(first_minMaxLoc)[25:28]	
 	result = first_yRegion.replace(')', '')
-	print(f'result: {result}')
+	#print(f'result: {result}')
+
+	result = int(result)
+	listSelector = selectList(result)
+
+	if result == '':
+		index += -1
+		break
+
+
+
+
 
 
 	imageName = (f'assets/testing{index}') # save images as newimage{column index}    	
@@ -113,12 +128,13 @@ for index in range(0,12):
 	print(f'{imageName}: {final}')
 
 	if final == '':
+		final = 0
 		index += -1
 		break
 	else:	
 		final = int(final)
 		selector = getCharacter(final)
-		final_string+=characters[selector]
+		final_string+=listSelector[selector]
 		print(f"final string: {final_string}")
 		print("\n")
 
