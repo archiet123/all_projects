@@ -45,7 +45,7 @@ def getCharacter(final):
 		selector = 9
 		return selector
 
-img = cv2.imread(f'card.jpg')#reading init pic
+img = cv2.imread(f'assets\card.jpg')#reading init pic
 cropped = img[260:650,460:1460]#setting bounds of whole punchcard
 
 column0 = img[260:650, 470:480]#column0 bounds  
@@ -82,7 +82,7 @@ plt.imsave("testing10.jpg", column10)
 toRemove = ["/", ")", "("]
 
 
-for index in range(0,10):
+for index in range(0,11):
 	imageName = (f'testing{index}') # save images as newimage{column index}    	
 	read = cv2.imread(f'{imageName}.jpg')#this will need to loop through all images that need to be read	
 	#shape =read.shape	
@@ -104,6 +104,7 @@ for index in range(0,10):
 	print(f'{imageName} {final}')
 
 	if final == '':
+		index += -1
 		break
 	else:	
 		final = int(final)
