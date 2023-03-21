@@ -7,9 +7,9 @@ import PIL
 import matplotlib.pyplot as plt
 import cv2
 
-img = cv2.imread(f'assets/abc123.jpg')#reading init pic
+img = cv2.imread(f'imagesToRead/abc123.jpg')#reading init pic
 
-
+ 
 
 column0 = img[180:300, 467:477]#column0 bounds  
 plt.imsave("upperRowImages/topRow0.jpg", column0)

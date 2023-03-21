@@ -71,9 +71,9 @@ def getCharacter(final):
 	#elif final > 330 and final < 350:
 	#	selector = 9
 	#	return selector
+ 
 
-
-img = cv2.imread(f'assets/abc123.jpg')#reading init pic
+img = cv2.imread(f'imagesToRead/abc123.jpg')#reading init pic
 cropped = img[260:650,460:1460]#setting bounds of whole punchcard
 
 
