@@ -67,7 +67,7 @@
             <p1 class="heading blackBackground mapHeader">Uk Weather Map</p1>
         </div>
         <div class="mapContainer">
-            <img class="map" src="/assests/ukOutline.png" alt="uk map" ">
+            <img class="map" src="/assets/ukOutline.png" alt="uk map" ">
         </div>
     </div>
 

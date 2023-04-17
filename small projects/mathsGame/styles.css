@@ -1,0 +1,61 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #B2CDFC;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --bigText: 25px;
+    --white: #ffffff;
+  }
+
+.title{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.titleText{
+    font-size: 50px;
+    color: black;
+}
+
+.displayText{
+    font-size: 25px;
+    color: #FEFC4B;
+}
+
+.inputFormat{
+    font-size: 25px;
+    border-radius: 4px;
+    width: 3rem;
+    height: 3rem;
+    text-align: center;
+    outline: none;
+    border: 0px solid;
+
+}
+
+.mainContent{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    width: 15%;
+    top: 40%;
+}
+
+.mathsQuestion{
+    display: flex;
+    flex-direction: row;  
+    justify-content: space-between;
+    align-items: center;
+}
+
+.textContainer{
+    background-color: lightgrey;
+    border-radius: 10px;
+    padding-inline: 1rem;
+    
+    
+}
