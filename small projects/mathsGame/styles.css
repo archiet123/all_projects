@@ -1,32 +1,44 @@
-body{
+body {
     padding: 0;
     margin: 0;
-    background-color: #B2CDFC;
-    font-family: 'Roboto', sans-serif;
+    background-color: #172554;
+    font-family: "Roboto", sans-serif;
 }
 
 :root {
     --bigText: 25px;
     --white: #ffffff;
-  }
+}
 
-.title{
+.title {
     display: flex;
     flex-direction: column;
     text-align: center;
 }
 
-.titleText{
+.titleText {
     font-size: 50px;
-    color: black;
+    color: #eff6ff;
 }
 
-.displayText{
+.displayText {
     font-size: 25px;
-    color: #FEFC4B;
+    color: #eff6ff;
 }
 
-.inputFormat{
+#answer-state {
+    font-size: 25px;
+    text-align: center;
+    color: #eff6ff;
+}
+
+#userStreak {
+    font-size: 25px;
+    text-align: center;
+    color: #eff6ff;
+}
+
+.inputFormat {
     font-size: 25px;
     border-radius: 4px;
     width: 3rem;
@@ -34,10 +46,11 @@ body{
     text-align: center;
     outline: none;
     border: 0px solid;
-
+    background-color: #eff6ff;
+    height: 4rem;
 }
 
-.mainContent{
+.mainContent {
     position: absolute;
     left: 50%;
     transform: translate(-50%);
@@ -45,17 +58,28 @@ body{
     top: 40%;
 }
 
-.mathsQuestion{
+.mathsQuestion {
     display: flex;
-    flex-direction: row;  
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
 
-.textContainer{
+.textContainer {
     background-color: lightgrey;
     border-radius: 10px;
     padding-inline: 1rem;
-    
-    
+    background-color: #eff6ff;
+}
+
+.countStreak {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+}
+
+.streak {
+    display: flex;
+    gap: 5px;
 }

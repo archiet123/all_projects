@@ -14,7 +14,7 @@
             <h1 class="titleText">Multiplication Game</h1>
         </div>
         <div class="subheading">
-            <h2 class="">Practice your multiplication knowledge</h2>
+            <h2 class="displayText">Practice your multiplication knowledge</h2>
         </div>
     </section>
 
@@ -31,18 +31,27 @@
             <h1 class="displayText">=</h1>
 
             <input id="userAnswer" class="inputFormat" type="text">
+
         </div>
+        <div id="answer-state"></div>
+        <div class="countStreak">
+            <div class="displayText streak">Streak: 
+                <div id="userStreak"></div>
+            </div>
+        </div>
+        
     </section>
 
     <script>
         let result = 0;
+        var streakCounter = 0;
 
         function generateRandom(maxLimit = 12) {
             let rand = Math.random() * maxLimit;
 
             rand = Math.floor(rand);
-
-            return rand;
+            
+            return Math.max(1, rand);
         }
 
         function placeNumbers() {
@@ -63,25 +72,50 @@
             console.log("sdkaig")
             if (e.key === "Enter") {
                 if (result == userAnswer.value) {
+                    removeExistingElement()        
                     createAnswerElement("Correct")
+                    streakCounter = streakCounter +1                           
                 } else {
+                    removeExistingElement()
                     createAnswerElement("Incorrect")
+                    streakCounter = 0               
                 }
                 placeNumbers()
+                displayStreak()
+                userAnswer.value = ""
             }
 
 
         });
 
+        function displayStreak(){
+           document.getElementById("userStreak").innerHTML = streakCounter
+        }
+
         function createAnswerElement(text) {
+          
             // Create element:
             const para = document.createElement("p");
             para.id = "tempValue";
             para.innerText = text;
 
-            // Append to body:
-            document.body.appendChild(para);
+            // Append to answer-state element:
+            var answerState = document.getElementById("answer-state")
 
+            answerState.appendChild(para);
+            
+        }
+
+        function removeExistingElement(){
+            const remove = document.getElementById("tempValue");
+            console.log(typeof remove)
+            if (remove) {
+                // alert("remove")
+                console.log("removed")
+                remove.remove();
+            } else {
+            // alert("Element does not exist");
+            }
         }
     </script>
 
