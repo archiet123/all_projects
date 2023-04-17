@@ -76,6 +76,7 @@
         function createAnswerElement(text) {
             // Create element:
             const para = document.createElement("p");
+            para.id = "tempValue";
             para.innerText = text;
 
             // Append to body:
