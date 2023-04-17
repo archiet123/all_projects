@@ -35,58 +35,53 @@
     </section>
 
     <script>
+        let result = 0;
+
         function generateRandom(maxLimit = 12) {
             let rand = Math.random() * maxLimit;
 
             rand = Math.floor(rand);
 
-            // alert(rand);
             return rand;
         }
 
-        let num1 = generateRandom()
-        let num2 = generateRandom()
-        document.getElementById("numb1").innerHTML = num1
-        document.getElementById("numb2").innerHTML = num2
+        function placeNumbers() {
+            let num1 = generateRandom()
+            let num2 = generateRandom()
+            document.getElementById("numb1").innerHTML = num1
+            document.getElementById("numb2").innerHTML = num2
 
-        let final = num1 * num2;
-        // alert(final)
+            result = num1 * num2;
+        }
+
+
+        placeNumbers()
 
         var userAnswer = document.getElementById("userAnswer")
-        console.log(userAnswer)
-        // alert(userAnswer)
 
         userAnswer.addEventListener("keydown", (e) => {
             console.log("sdkaig")
             if (e.key === "Enter") {
-                if (final == userAnswer.value) {
-                    correctElement()
-                    generateRandom()
+                if (result == userAnswer.value) {
+                    createAnswerElement("Correct")
                 } else {
-                    incorrectElement()
+                    createAnswerElement("Incorrect")
                 }
+                placeNumbers()
             }
 
 
         });
 
-        function correctElement() {
+        function createAnswerElement(text) {
             // Create element:
             const para = document.createElement("p");
-            para.innerText = "correct";
+            para.innerText = text;
 
             // Append to body:
             document.body.appendChild(para);
-        };
 
-        function incorrectElement() {
-            // Create element:
-            const para = document.createElement("p");
-            para.innerText = "incorrect";
-
-            // Append to body:
-            document.body.appendChild(para);
-        };
+        }
     </script>
 
 </body>
